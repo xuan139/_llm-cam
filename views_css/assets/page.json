@@ -1,0 +1,19 @@
+{
+    "banner": {
+      "part1": "拍照你的餐盘：",
+      "part2": "解析营养"
+    },
+    "pageReference": "参考信息来源：【黄手环】文章资源库",
+    "pageTitle": "饮食指南",
+    "timeLine1": {
+      "title": "疾病可防",
+      "subtitle": "可防副标题",
+      "text": "可防文本信息"
+    },
+    "timeLine2": {
+      "title": "疾病可控",
+      "subtitle": "可控副标题",
+      "text": "可控文本信息"
+    }
+  }
+  

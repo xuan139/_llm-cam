@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/images/book.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <style>
+      .camera-button {
+        cursor: pointer;
+        position: absolute;
+        bottom: 30px;
+        left: calc(50% - 40px); /* Adjust horizontally centered position */
+        width: 80px; /* Adjust button size */
+        height: 80px; /* Adjust button size */
+        background-image: url('./assets/images/camera2svg.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+        outline: none;
+        }
+    </style>
+  </head>
+  <body class="dark">
+
+    <main class="bg-neugral-200 dark:bg-enutral-200">
+      <header class="text-neutral-900">
+        <nav class="sticky top-0 z-10 flex bg-gradient-to-r from-indigo-400 to-indigo-100 items-center gap-2 p-2">
+          <img src="./assets/images/camera2svg.svg" width="50" />
+          <div class="text-2xl font-bold">
+            <span id="bannerPart1"></span> <br> <span id="bannerPart2" class="text-neutral-600"></span>
+          </div>
+          <div class="my-auto ml-auto hidden md:flex">
+            <div class="menu-item">
+              <span class="text-neutral-600">首页</span>
+            </div>
+          </div>
+        </nav>
+        <div class="flex justify-center items-center h-screen relative">
+          <video id="videoElement" autoplay style="display: none;"></video>
+          <canvas id="canvasElement" class="w-full h-full" style="position: relative; z-index: 1;"></canvas>
+          <button id="cameraButton" class="camera-button" style="z-index: 2;"></button>
+        </div>
+        <h2 class="mt-20 text-neutral-600" id="pageTitle"></h2>
+        <p id="pageReference"></p>
+        <div id="response" class="relative mt-5 rounded-lg bg-blue-50 py-4 px-2 text-neutral-700" style="display: none;">
+          <div class="absolute top-0 left-1/2 -ml-[8px] h-full w-4 rounded-full bg-gradient-to-b from-indigo-400 via-indigo-300 to-indigo-300">
+            <div class="sticky top-1/2">
+              <div class="relative h-4 w-4">
+                <div class="absolute h-4 w-4 animate-ping rounded-full bg-blue-600 opacity-75"></div>
+                <div class="relative h-4 w-4 rounded-full bg-blue-700"></div>
+              </div>
+            </div>
+          </div>
+          <div id="resDisplay" class="grid grid-cols-2 gap-8">
+            <div>
+              <h4 class="my-4 rounded-lg bg-neutral-50 p-2" id="timeLine1Title"></h4>
+              <div class="font-bold" id="timeLine1Subtitle"></div>
+              <div class="text-neutral-900" id="timeLine1Text"></div>
+            </div>
+            <div>
+              <h4 class="my-4 rounded-lg bg-neutral-50 p-2" id="timeLine2Title"></h4>
+              <div class="font-bold" id="timeLine2Subtitle"></div>
+              <div class="text-neutral-900" id="timeLine2Text"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+    
+    
+    
+    <script src="photo.js"></script>
+  </body>
+</html>
